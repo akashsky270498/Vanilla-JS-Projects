@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  flex: 1;
+  background: none;
+  color: #ddd;
+  cursor: pointer;
+  padding: 0.7rem;
+  font-size: 1rem;
+  transition: 0.3s;
+  border: none;
+}
+
+.tabs button.active {
+    border-bottom: 2px solid #00c6ff;
+    color: #fff;
+} 
+
+.tab-content {
+    display: none;
+    text-align: center;
+}
+
+ .tab-content.active {
+    display: block;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.display {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.controls button,
+.controls input {
+  padding: 0.6rem 0.7rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.controls button {
+  background: #00c6ff;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #009acb;
+}
+
+.controls input {
+  width: 100px;
+  text-align: center;
+}
+
+@media (max-width) {
+  .display {
+    font-size: 1.5rem;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .controls input,
+  .controls button {
+    width: 100%;
+  }
+}
