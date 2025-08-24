@@ -64,3 +64,52 @@ document
 document
   .getElementById("resetStopWatch")
   .addEventListener("click", resetStopWatch);
+
+//Timer
+const timerDisplay = document.getElementById("timerDisplay");
+const minutesInput = document.getElementById("minutesSlot");
+let timerInterval;
+let timerTime = 0;
+
+function formatTimer(seconds) {
+  const mins = String(Math.floor(seconds / 60)).padStart(2, "0");
+  const secs = String(seconds % 60).padStart(2, "0");
+  return `${mins}:${secs}`;
+}
+
+function startTimer() {
+  if (timerInterval) return;
+
+  if (timerTime === 0) {
+    timerTime = parseInt(minutesInput.value || 0) * 60;
+  }
+
+  if (timerTime <= 0) return;
+
+  timerInterval = setInterval(() => {
+    timerTime--;
+    timerDisplay.textContent = formatTimer(timerTime);
+
+    if (timerTime <= 0) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      alert("Time's up!");
+    }
+  }, 1000);
+}
+
+function pauseTimer(){
+    clearInterval(timerInterval);
+    timerInterval = null;
+}
+
+function resetTimer() {
+    pauseTimer();
+    timerTime = 0;
+    timerDisplay.textContent = "00:00";
+    minutesInput.value = "";
+}
+
+document.getElementById("startTimer").addEventListener("click", startTimer);
+document.getElementById("pauseTimer").addEventListener("click", pauseTimer);
+document.getElementById("resetTimer").addEventListener("click", resetTimer);
