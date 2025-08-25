@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker & Theme Switcher</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Color Picker & Theme Switcher</h2>
+      <button id="themeToggle" class="theme-btn">Toggle Dark/Light</button>
+      <div class="colorPicker">
+        <label for="colorInput">Pick a color</label>
+        <input type="color" id="colorInput" value="#3498db" />
+      </div>
+      <div class="preview-box" id="previewBox">
+        <p>This box will change color!</p>
+      </div>
+    </div>
+  </body>
+</html>
