@@ -20,3 +20,64 @@ body {
     color: var(--text-light);
     transition: background 0.3s, color 0.3s;
 }
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.theme-btn {
+    padding: 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.theme-btn:hover {
+    opacity: 0.9
+}
+
+.colorPicker {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.colorPicker input {
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+}
+
+.preview-box {
+    margin-top: 20px;
+    padding: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 12px;
+    transition: background 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark)
+}
+
+@media(max-width: 600px) {
+    .theme-btn {
+        width: 100%;
+    }
+
+    .preview-box {
+        padding: 30px;
+    }
+}
