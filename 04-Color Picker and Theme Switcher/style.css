@@ -21,6 +21,10 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
+h2 {
+    margin-bottom: 12px;
+}
+
 .container {
     max-width: 600px;
     margin: 50px auto;
@@ -51,11 +55,16 @@ body {
     gap: 10px;
 }
 
+.colorPicker label {
+    font-weight: 600;
+}
+
 .colorPicker input {
     width: 50px;
     height: 40px;
     cursor: pointer;
     border: none;
+    border-radius: 12px;
 }
 
 .preview-box {
